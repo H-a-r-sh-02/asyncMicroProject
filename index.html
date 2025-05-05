@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Profile Viewer (Dark)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#0d1117',
+            card: '#161b22',
+            border: '#30363d',
+            text: '#c9d1d9',
+            accent: '#58a6ff'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background text-text min-h-screen flex flex-col items-center p-6">
+
+  <!-- Main Container -->
+  <main class="w-full max-w-xl bg-card border border-border rounded-2xl shadow-md p-6 mt-12">
+    <h1 class="text-2xl font-bold text-center mb-6 text-text">GitHub Profile Viewer</h1>
+
+    <!-- Input Section -->
+    <form>
+    <div class="flex items-center gap-3 mb-6">
+      <input
+        type="text"
+        placeholder="Enter GitHub username"
+        class="flex-grow px-4 py-2 bg-background text-text border border-border rounded-lg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent"
+      />
+     <input type="submit" value="Search"  class="px-5 py-2 bg-accent text-white font-medium rounded-lg hover:bg-blue-500 transition">
+    </div>
+  </form>
+
+    <!-- Profile Display (Sample Data) -->
+    <div class="border-t border-border pt-6">
+      <div class="flex gap-4 items-start">
+        <img
+          src="https://avatars.githubusercontent.com/u/9919?v=4"
+          alt="GitHub Avatar"
+          class="w-24 h-24 rounded-full border border-border"
+        />
+        <div>
+          <h2 class="text-xl font-semibold text-white">GitHub</h2>
+          <p class=" user text-sm text-gray-400">@github</p>
+          <p class=" bio mt-2 text-sm text-gray-300">How people build software.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 mt-6 text-sm text-gray-300">
+        <div class="details font-semibold">Followers:</div>
+        <div class="details font-semibold">Following:</div>
+        <div class="details font-semibold">Public Repos:</div>
+        <div class="details font-semibold">Company:</div>
+        <div class="details font-semibold">Location:</div>
+      </div>
+
+      <a
+        href="https://github.com/github"
+        target="_blank"
+        class="block mt-6 text-center text-accent hover:underline font-medium"
+      >
+        View Full Profile →
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-10 text-sm text-gray-500">
+    Made with <span class="text-red-500">❤</span> using Tailwind CSS
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
